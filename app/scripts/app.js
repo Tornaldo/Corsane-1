@@ -5,14 +5,28 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'ui.bootstrap',
+    'ngAnimate'
+
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'views/index.html',
         controller: 'MainCtrl'
       })
+
+      .when('/search', {
+        templateUrl : 'views/search.html',
+        controller  : 'SearchCtrl'
+      })
+
+      .when('/submit', {
+        templateUrl : 'views/submit.html',
+        controller  : 'SubmitCtrl'
+      })
+
       .otherwise({
         redirectTo: '/'
       });

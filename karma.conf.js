@@ -19,8 +19,10 @@ module.exports = function(config) {
       'app/bower_components/angular-route/angular-route.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
-      'test/mock/**/*.js',
-      'test/spec/**/*.js'
+    //  'test/mock/**/*.js',
+      'test/spec/**/*.js',
+      'app/bower_components/angular-bootstrap/ui-bootstrap.js',
+      'app/bower_components/angular-animate/angular-animate.js'
     ],
 
     // list of files / patterns to exclude
