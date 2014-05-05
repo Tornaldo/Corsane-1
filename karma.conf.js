@@ -22,7 +22,7 @@ module.exports = function(config) {
     //  'test/mock/**/*.js',
       'test/spec/**/*.js',
       'app/bower_components/angular-bootstrap/ui-bootstrap.js',
-      'app/bower_components/angular-animate/angular-animate.js'
+      'app/bower_components/angular-animate/angular-animate.js',
     ],
 
     // list of files / patterns to exclude

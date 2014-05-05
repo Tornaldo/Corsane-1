@@ -7,8 +7,20 @@
 	padding: 0;
 }
 
+.header {
+	background-color: white;
+}
+
+.clear {
+	clear: both;
+}
+
 body {
-	background: white;
+	background: #eee;
+}
+
+h1 {
+	margin: 0;
 }
 
 h2 {
@@ -17,10 +29,6 @@ h2 {
 	font-family: "Open Sans", sans-serif;
 	font-size: 2.2em;
 	font-weight: 400;
-}
-
-.searchRes {
-	padding: 0 5px 10px 5px;
 }
 
 section {
@@ -86,6 +94,14 @@ section {
 	color: #555;
 	position: relative;
 	top: -8px;
+}
+
+.col-md-4, .col-md-8 {
+	padding: 0 5px 10px 5px;
+}
+
+.searchRes {
+	padding-bottom: 10px;
 }
 
 .thumbs-up {
