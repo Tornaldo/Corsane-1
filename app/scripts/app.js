@@ -27,7 +27,13 @@ angular
         controller  : 'SubmitCtrl'
       })
 
+      .when('/playlist', {
+        templateUrl : 'views/playlist.html',
+        controller  : 'PlaylistCtrl'
+      })
+
       .otherwise({
         redirectTo: '/'
       });
+
   });
