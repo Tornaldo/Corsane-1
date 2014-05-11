@@ -2,5 +2,6 @@
 
 angular.module('corsaneApp')
   .controller('SubmitCtrl', function ($scope) {
-    $scope.message = 'This is the submit view!';
+    $scope.resource = {url: '', name: ''};
+
   });

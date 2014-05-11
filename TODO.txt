@@ -1,0 +1,17 @@
+TODO
+
+
+#OnSite
+
+	Lege søkefelt
+	Lage submit view
+	Lage søkeresulat
+	Lage GUI for lister
+	Lage search filter
+
+#InCode
+
+
+#Other
+
+	Forstå bower build endbuild.

@@ -32,6 +32,11 @@ angular
         controller  : 'PlaylistCtrl'
       })
 
+      .when('/hello', {
+        templateUrl : 'views/hello.html',
+        controller  : 'HelloCtrl'
+      })
+
       .otherwise({
         redirectTo: '/'
       });

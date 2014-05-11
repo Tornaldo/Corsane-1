@@ -1,10 +1,38 @@
+<div class="searchFilter">
+  <section id="filterBack"><table>
+    <tr>
+      <th><section class="filter">
+    <img src="images/Multimedia-26.png" class="icon">
+    <h3>Videos</h3>
+  </section></th>
+      <th><section class="filter">
+    <img src="images/Education_Science-20.png" class="icon icon-courses">
+    <h3>Courses</h3>
+  </section></th>
+      <th><section class="filter">
+    <img src="images/Education_Science-05.png" class="icon icon-courses">
+    <h3>Articles</h3>
+  </section></th>
+      <th><section class="filter">
+    <img src="images/Graphic-Design-Tools-07.png" class="icon icon-courses">
+    <h3>Playlists</h3>
+  </section></th>
+  <th><section class="filter">
+    <img src="images/Graphic-Design-Tools-07.png" class="icon icon-courses">
+    <h3>More</h3>
+  </section></th>
+    </tr>
+  </table></section>
+</div>
+
 <div class="searchRes">
   <section class="videos">
-    <img src="images/Multimedia-26.png" class="icon">
-    <h2>Videos</h2>
+    <iframe width="720" height="425"  src="//www.youtube.com/embed/Mr2VBRdRYak" frameborder="0" allowfullscreen></iframe>
+  </section>
+</div>
 
-    <iframe width="560" height="315" src="//www.youtube.com/embed/Mr2VBRdRYak" frameborder="0" allowfullscreen></iframe>
-
+<div class="searchRes" ng-controller="SearchCtrl">
+  <section class="videos">
     <table class="table table-striped table-hover ">
       <thead>
         <tr>
@@ -21,88 +49,19 @@
           <td>Hacking for script kiddies</td>
           <td>4</td>
         </tr>
-        <tr>
-          <td>How to avoid derping</td>
-          <td>2</td>
-        </tr>
+
       </tbody>
     </table>
   </section>
+  <ul>
+    <li ng-repeat="resource in getResource">{{resource.name}}</li>
+  </ul>
+   <ul>
+    <li ng-repeat="thing in things">{{thing}}</li>
+  </ul>
+  <button ng-click="$log.log(getResource(38))">log</button>
+
 </div>
 
-<div class="searchRes">
-  <section class="courses">
-    <img src="images/Education_Science-20.png" class="icon icon-courses">
-    <h2>Courses</h2>
-    <a href="#" class="result">
-      <h4>First minutes with Grunt</h4>
-      <p class="site">CSS-Tricks</p>
-      <div class="rating">
-        <div class="rating-bar">
-          <div class="positive" style="width: 85%"></div>
-          <div class="negative" style="width: 15%"></div>
-        </div>
-        <div class="thumbs-up">
-          <span class="entypo">👍</span>
-          <span>183</span>
-        </div>
-        <div class="thumbs-down">
-          <span class="entypo">👎</span>
-          <span>13</span>
-        </div>
-      </div>
-    </a>
-    <a href="#" class="result">
-      <h4>Sass for beginners</h4>
-      <p class="site">Lynda</p>
-      <div class="rating">
-        <div class="rating-bar">
-          <div class="positive" style="width: 80%"></div>
-          <div class="negative" style="width: 20%"></div>
-        </div>
-        <div class="thumbs-up">
-          <span class="entypo">👍</span>
-          <span>153</span>
-        </div>
-        <div class="thumbs-down">
-          <span class="entypo">👎</span>
-          <span>10</span>
-        </div>
-      </div>
-    </a>
-    <a href="#" class="result">
-      <h4>Creating GUI interface using Visual Basic</h4>
-      <p class="site">HowToBasic</p>
-      <div class="rating">
-        <div class="rating-bar">
-          <div class="positive" style="width: 72%"></div>
-          <div class="negative" style="width: 28%"></div>
-        </div>
-        <div class="thumbs-up">
-          <span class="entypo">👍</span>
-          <span>137</span>
-        </div>
-        <div class="thumbs-down">
-          <span class="entypo">👎</span>
-          <span>14</span>
-        </div>
-      </div>
-    </a>
-  </section>
-</div>
 
-<div class="searchRes">
-  <section class="articles">
-    <img src="images/Education_Science-05.png" class="icon icon-courses">
-    <h2>Articles</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, dicta, voluptatum accusantium adipisci in perferendis tenetur doloribus ea animi impedit iste consectetur explicabo optio architecto repellendus obcaecati illum. Nihil, tempore.</p>
-  </section>
-</div>
 
-<div class="searchRes">
-  <section class="other">
-    <img src="images/Graphic-Design-Tools-07.png" class="icon icon-courses">
-    <h2>Other</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, dicta, voluptatum accusantium adipisci in perferendis tenetur doloribus ea animi impedit iste consectetur explicabo optio architecto repellendus obcaecati illum. Nihil, tempore.</p>
-  </section>
-</div>
