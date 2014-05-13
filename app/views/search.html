@@ -24,8 +24,8 @@
 <div class="searchRes" ng-controller="SearchCtrl">
   <section class="videos">
     <div ng-show="selected">
-      <h2>{{selected.name}}</h2>
-      <iframe width="720" height="425"  src="http://en.wikipedia.org/wiki/Norway" frameborder="0" allowfullscreen></iframe>
+      <h3>{{selected.name}}</h3>
+      <iframe width="720" height="425"  src="{{selected.url}}" frameborder="0" allowfullscreen></iframe>
     </div>
       
   </section>
@@ -35,13 +35,13 @@
       <thead>
         <tr>
           <th>Resource</th>
-          <th>Type</th>
+          <th>URL</th>
         </tr>
       </thead>
       <tbody>
         <tr ng-repeat="resource in resources">
           <td><a href="" ng-click="showResource(resource)">{{resource.name}}</a></td>
-          <td>{{resource.id}}</td>
+          <td>{{resource.url}}</td>
         </tr>
 
       </tbody>

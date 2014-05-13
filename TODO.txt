@@ -5,6 +5,7 @@ TODO
 
 	Lage GUI for lister
 	Lage search filter
+	Lage søk
 
 #InCode
 
@@ -22,3 +23,8 @@ TODO
 #Other
 
 	Forstå bower build endbuild.
+
+#Problems
+
+	Youtube embedding
+	'X-Frame-Options' to 'SAMEORIGIN'

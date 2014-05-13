@@ -1,4 +1,4 @@
-<div class="navbar navbar-default">
+<div class="navbar navbar-default" ng-controller="NavbarCtrl">
     <div class="container">
       <div class="navbar-header" >
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -12,12 +12,12 @@
         <ul class="nav navbar-nav">
           <li class="active"><a ng-href="#">Home</a></li>
             <li><a ng-href="#/submit">Submit</a></li>
-            <form class="navbar-form navbar-left" role="search">
+            <form class="navbar-form navbar-left" role="search" >
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
+                <input type="text" class="form-control" placeholder="Search" ng-model="searchTerm">
               </div>
+              <button type="submit" class="btn btn-primary" ng-click="search(searchTerm)">Search</button>
             </form>
-            <li><a ng-href="#/search">Search</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">Log in</a></li>

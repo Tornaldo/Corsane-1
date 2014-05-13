@@ -1,12 +1,21 @@
 'use strict';
 
 angular.module('corsaneApp')
-  .service('getResource', function ($resource, $http) {
-  	var Res = $resource('http://localhost:8888/Corsane/web/app_dev.php/api/resources/:id', { id: '@id' },{});
-  	return Res;
-  	// this.postResource = function(resource){
-  	// 	var url = 'http://localhost:8888/Corsane/web/app_dev.php/api/resources';
-  	// 	return $http.post(url, resource);
-  	// }
+  .service('getResource', function ($resource, $http, $log) {
+  	
+
+  	var res = 'fail';
+  
+  	return {
+  		setSearch: function(term){
+  			res = term;
+  			$log.info('Funker det?'+term);
+  		},
+  		getSearch: function(){
+  			$log.info('Funker det2?');
+  			return res;
+  		}
+  	};
+  	
 
   });
