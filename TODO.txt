@@ -3,13 +3,20 @@ TODO
 
 #OnSite
 
-	Lege søkefelt
-	Lage submit view
-	Lage søkeresulat
 	Lage GUI for lister
 	Lage search filter
 
 #InCode
+
+	Structure:
+		Home
+		Submit
+		Search
+		Playlist
+		Navbar
+		Sidebar
+
+	Controllers/Services:
 
 
 #Other

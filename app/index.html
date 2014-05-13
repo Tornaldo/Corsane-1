@@ -23,7 +23,7 @@
 
     <!-- endbuild -->
   </head>
-  <body ng-app="corsaneApp" ng-controller="MainCtrl" >
+  <body ng-app="corsaneApp" ng-controller="HomeCtrl" >
     <div ng-include src="'views/navbar.html'"></div>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -79,18 +79,17 @@
     <!-- endbuild -->
 
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/playlist.js"></script>
-        <script src="scripts/filters/reverse.js"></script>
-        <script src="scripts/services/playlist.js"></script>
-        <script src="scripts/controllers/search.js"></script>
-        <script src="scripts/services/submitservice.js"></script>
-        <script src="scripts/services/corsaneservice.js"></script>
-        <script src="scripts/directives/search-module.js"></script>
-        <script src="scripts/controllers/hello.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/home.js"></script>
+    <script src="scripts/controllers/playlist.js"></script>
+    <script src="scripts/filters/reverse.js"></script>
+    <script src="scripts/controllers/search.js"></script>
+    <script src="scripts/directives/search-module.js"></script>
+    <script src="scripts/controllers/showresource.js"></script>
+    <script src="scripts/services/getresource.js"></script>
+    <script src="scripts/controllers/submit.js"></script>
+    <!-- endbuild -->
 
 </body>
 </html>

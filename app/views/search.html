@@ -1,65 +1,52 @@
 <div class="searchFilter">
-  <section id="filterBack"><table>
-    <tr>
-      <th><section class="filter">
-    <img src="images/Multimedia-26.png" class="icon">
-    <h3>Videos</h3>
-  </section></th>
-      <th><section class="filter">
-    <img src="images/Education_Science-20.png" class="icon icon-courses">
-    <h3>Courses</h3>
-  </section></th>
-      <th><section class="filter">
-    <img src="images/Education_Science-05.png" class="icon icon-courses">
-    <h3>Articles</h3>
-  </section></th>
-      <th><section class="filter">
-    <img src="images/Graphic-Design-Tools-07.png" class="icon icon-courses">
-    <h3>Playlists</h3>
-  </section></th>
-  <th><section class="filter">
-    <img src="images/Graphic-Design-Tools-07.png" class="icon icon-courses">
-    <h3>More</h3>
-  </section></th>
-    </tr>
-  </table></section>
-</div>
-
-<div class="searchRes">
-  <section class="videos">
-    <iframe width="720" height="425"  src="//www.youtube.com/embed/Mr2VBRdRYak" frameborder="0" allowfullscreen></iframe>
-  </section>
+  <div class="btn-group btn-group-justified">
+    <div class="btn-group">
+      <button type="button" class="btn btn-default">All</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default">Videos</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default">Articles</button>
+    </div>
+        <div class="btn-group">
+      <button type="button" class="btn btn-default">Playlists</button>
+    </div>
+        <div class="btn-group">
+      <button type="button" class="btn btn-default">Courses</button>
+    </div>
+        <div class="btn-group">
+      <button type="button" class="btn btn-default">More</button>
+    </div>
+  </div>
 </div>
 
 <div class="searchRes" ng-controller="SearchCtrl">
+  <section class="videos">
+    <div ng-show="selected">
+      <h2>{{selected.name}}</h2>
+      <iframe width="720" height="425"  src="http://en.wikipedia.org/wiki/Norway" frameborder="0" allowfullscreen></iframe>
+    </div>
+      
+  </section>
+
   <section class="videos">
     <table class="table table-striped table-hover ">
       <thead>
         <tr>
           <th>Resource</th>
-          <th>Rating</th>
+          <th>Type</th>
         </tr>
       </thead>
       <tbody>
-        <tr class="info">
-          <td>First minutes with Grunt</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <td>Hacking for script kiddies</td>
-          <td>4</td>
+        <tr ng-repeat="resource in resources">
+          <td><a href="" ng-click="showResource(resource)">{{resource.name}}</a></td>
+          <td>{{resource.id}}</td>
         </tr>
 
       </tbody>
     </table>
   </section>
-  <ul>
-    <li ng-repeat="resource in getResource">{{resource.name}}</li>
-  </ul>
-   <ul>
-    <li ng-repeat="thing in things">{{thing}}</li>
-  </ul>
-  <button ng-click="$log.log(getResource(38))">log</button>
 
 </div>
 

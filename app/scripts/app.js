@@ -14,7 +14,7 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/index.html',
-        controller: 'MainCtrl'
+        controller: 'HomeCtrl'
       })
 
       .when('/search', {
@@ -30,11 +30,6 @@ angular
       .when('/playlist', {
         templateUrl : 'views/playlist.html',
         controller  : 'PlaylistCtrl'
-      })
-
-      .when('/hello', {
-        templateUrl : 'views/hello.html',
-        controller  : 'HelloCtrl'
       })
 
       .otherwise({

@@ -1,16 +1,14 @@
 
   <section class="videos">
     <h2 >Submit</h2>
+    <form ng-submit="submit()" ng-controller="SubmitCtrl">
 
-    <div class="input-group input-group-lg" id="inputField">
-  <span class="input-group-addon">@</span>
-  <input type="text" class="form-control" placeholder="URL">
-</div>
-    <div class="input-group input-group-lg" id="inputField">
-  <span class="input-group-addon">#</span>
-  <input type="text" class="form-control" placeholder="Title">
-</div>
-	<div class="submitBtn"><a class="btn btn-lsg btn-success" ng-href="#">Submit</a>
-	</div>
+      <input type="text" class="form-control" placeholder="Name" ng-model="resourceName">
+      <div id="submitBtn">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+
+    </form>
+
   </section>
   	

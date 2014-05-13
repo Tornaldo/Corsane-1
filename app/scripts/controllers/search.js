@@ -1,27 +1,16 @@
 'use strict';
 
 angular.module('corsaneApp')
-  .controller('SearchCtrl', function ($scope, $log, CorsaneService) {
-    $scope.things = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma',
-      'SitePoint'
-    ];
-    $scope.$log = $log;
-  	$scope.message = 'Hello World!';
+  .controller('SearchCtrl', function ($scope, $log, $resource, getResource) {
 
-    $scope.getResource = function(id) {
-      CorsaneService.getResource(id)
-        .success(function(data){
-          $log.info(data);
-          $scope.resource = data.resource[0];
-          $log.info(data);
-        })
-        .error(function(error){
-          $log.info("No resource here!");
-          $scope.status = 'unable to load resources' + error.message;
-        });
-    };
+    $scope.selected = null;
+    
+    $scope.resources = getResource.query();
+
+    $scope.showResource = function(item){
+    	$log.info(item.id);
+    	$scope.selected = item;
+
+    } 
 
   });
