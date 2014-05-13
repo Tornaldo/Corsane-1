@@ -2,7 +2,10 @@
   <section class="videos">
     <h2 >Submit</h2>
     <form ng-submit="submit()" ng-controller="SubmitCtrl">
-      <input type="text" class="form-control" placeholder="URL" ng-model="resourceURL">
+      <div id="inputField">
+        <input type="text" class="form-control" placeholder="URL" ng-model="resourceURL">
+      </div>
+      
       <input type="text" class="form-control" placeholder="Name" ng-model="resourceName">
       <div id="submitBtn">
         <button type="submit" class="btn btn-primary">Submit</button>

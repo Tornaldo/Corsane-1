@@ -5,7 +5,7 @@ TODO
 
 	Lage GUI for lister
 	Lage search filter
-	Lage søk
+	Auto iframe resize
 
 #InCode
 
@@ -22,7 +22,6 @@ TODO
 
 #Other
 
-	Forstå bower build endbuild.
 
 #Problems
 
