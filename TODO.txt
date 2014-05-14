@@ -9,6 +9,9 @@ TODO
 
 #InCode
 
+	Kommentere kode
+	Endre navn på getResource
+
 	Structure:
 		Home
 		Submit

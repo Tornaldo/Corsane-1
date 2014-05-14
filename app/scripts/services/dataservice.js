@@ -1,17 +1,17 @@
 'use strict';
 
 angular.module('corsaneApp')
-  .service('getResource', function ($resource, $http, $log) {
+  .service('DataService', function ($log) {
   	
 
   	var res = 'fail';
   
   	return {
-  		setSearch: function(term){
+  		set: function(term){
   			res = term;
   			$log.info('Funker det?'+term);
   		},
-  		getSearch: function(){
+  		get: function(){
   			$log.info('Funker det2?');
   			return res;
   		}

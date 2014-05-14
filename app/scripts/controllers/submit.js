@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('corsaneApp')
-	.controller('SubmitCtrl', function($scope, getResource, $log, $http) {
+	.controller('SubmitCtrl', function($scope, DataService, $log, $http) {
 
 		var name = '';
 		var url = '';

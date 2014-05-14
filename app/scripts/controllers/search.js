@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('corsaneApp')
-	.controller('SearchCtrl', function($scope, $log, $resource, getResource, $sce, $location) {
+	.controller('SearchCtrl', function($scope, $log, $resource, DataService, $sce, $location) {
 
 		$scope.selected = null;
 
@@ -12,7 +12,7 @@ angular.module('corsaneApp')
 
 		}
 
-		var term = getResource.getSearch();
+		var term = DataService.get();
 		$log.info('It came through!' + term);
 		var Res = $resource('http://localhost:8888/Corsane/web/app_dev.php/api/resources/' + term, {
 			id: '@id'

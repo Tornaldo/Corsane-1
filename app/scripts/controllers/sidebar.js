@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('corsaneApp')
-	.controller('PlaylistCtrl', function($scope, DataService) {
+	.controller('SidebarCtrl', function($scope, DataService) {
 		$scope.defaultLists = [{
 			name: 'Angular 101',
 			resources: {}
@@ -18,5 +18,5 @@ angular.module('corsaneApp')
 		$scope.passList = function(item) {
 			DataService.set(item);
 		};
-	});
 
+	});

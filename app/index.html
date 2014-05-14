@@ -30,7 +30,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-controller="PlaylistCtrl">
+    <div class="container" ng-controller="SidebarCtrl">
       <div ng-include src="'views/sidebar.html'"></div>
       <div class="col-md-8">
         <div ng-view class="mainView"></div>
@@ -87,9 +87,11 @@
     <script src="scripts/controllers/search.js"></script>
     <script src="scripts/directives/search-module.js"></script>
     <script src="scripts/controllers/showresource.js"></script>
-    <script src="scripts/services/getresource.js"></script>
+    <script src="scripts/services/dataservice.js"></script>
     <script src="scripts/controllers/submit.js"></script>
     <script src="scripts/controllers/navbar.js"></script>
+    <script src="scripts/services/playlistservice.js"></script>
+    <script src="scripts/controllers/sidebar.js"></script>
     <!-- endbuild -->
 
 </body>

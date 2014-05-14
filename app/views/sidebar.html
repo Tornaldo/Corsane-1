@@ -13,8 +13,8 @@
                 </tr>
               </thead>
               <tbody>
-                <tr ng-repeat="items in defaultLists | reverse">
-                  <td><a ng-href="#/playlist">{{items.name}}</a></td>
+                <tr ng-repeat="item in defaultLists | reverse">
+                  <td><a ng-href="#/playlist" ng-click="passList(item)">{{item.name}}</a></td>
                 </tr>
                 <tr>
                   <td><a ng-href="#/playlist">First minute with Grunt</a></td>
