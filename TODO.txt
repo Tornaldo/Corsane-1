@@ -6,6 +6,7 @@ TODO
 	Lage GUI for lister
 	Lage search filter
 	Auto iframe resize
+	Fikse playlist visning
 
 #InCode
 

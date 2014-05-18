@@ -4,7 +4,7 @@ angular.module('corsaneApp')
   .service('DataService', function ($log) {
   	
 
-  	var res = 'fail';
+  	var res = '1';
   
   	return {
   		set: function(term){
