@@ -21,18 +21,24 @@
   </div>
 </div>
 
+
+
 <div class="searchRes" ng-controller="SearchCtrl">
   <section class="videos">
     <div ng-show="selected">
-      <h3>{{selected.name}}</h3>
-      <div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    Add to list <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a ng-repeat="list in lists" ng-click="addToList(list)">{{list.name}}</a></li>
-  </ul>
-</div>
+      <ul class="nav navbar-nav">         
+        <li><h3>{{selected.name}}</h3></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><div class="btn-group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> Add to list <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a ng-repeat="list in lists" ng-click="addToList(list)">{{list.name}}</a></li>
+           </ul>
+        </div></li>
+      </ul>
+      
       <iframe width="720" height="425"  src="{{selected.url}}" frameborder="0" allowfullscreen></iframe>
     </div>
       

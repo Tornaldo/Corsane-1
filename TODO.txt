@@ -3,15 +3,16 @@ TODO
 
 #OnSite
 
-	Lage GUI for lister
+	Lage mulighet for å lage nye playlists
+	Legge til slette funksjonalitet
 	Lage search filter
 	Auto iframe resize
-	Fikse playlist visning
+
 
 #InCode
 
 	Kommentere kode
-	Endre navn på getResource
+	Skrive urlparser
 
 	Structure:
 		Home
@@ -30,4 +31,3 @@ TODO
 #Problems
 
 	Youtube embedding
-	'X-Frame-Options' to 'SAMEORIGIN'
