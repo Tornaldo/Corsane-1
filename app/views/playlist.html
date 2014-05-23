@@ -2,6 +2,7 @@
   <section class="videos">
     <div ng-show="selected">
       <h3>{{selected.name}}</h3>
+      <button type="button" class="btn btn-default" id="removeResource" ng-click="removeResource(selected, $index)">Remove resource</button>
 
       <iframe width="720" height="425"  src="{{selected.url}}" frameborder="0" allowfullscreen></iframe>
     </div>

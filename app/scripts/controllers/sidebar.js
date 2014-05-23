@@ -10,7 +10,7 @@ angular.module('corsaneApp')
 			resources: []
 		}];
 		$scope.addPlaylist = function() {
-			$http.post('http://localhost:8888/Corsane/web/app_dev.php/api/lists/addlists').success(function(data) {
+			$http.post('http://localhost:8888/Corsane/web/app_dev.php/api/lists/addlists?name=TestList').success(function(data) {
 				$rootScope.lists.push(data);
 				$log.info('It worked!' + data);
 			}).error(function(error, data, status, config) {

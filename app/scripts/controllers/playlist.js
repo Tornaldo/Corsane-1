@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('corsaneApp')
-	.controller('PlaylistCtrl', function($scope, $log, $rootScope, DataService, $resource, $sce) {
+	.controller('PlaylistCtrl', function($scope, $log, $rootScope, DataService, $resource, $sce, $http, $location) {
 
 		$scope.selected = null;
 
@@ -17,6 +17,17 @@ angular.module('corsaneApp')
 			$scope.selected.url = $sce.trustAsResourceUrl(item.url);
 			
 		};
+
+		$scope.removeResource = function(listElement, idx) {
+			
+			$http.post('http://localhost:8888/Corsane/web/app_dev.php/api/lists/removelistelements?listElementId='+ listElement.list_element_id + '&listId=' + playlistId).success(function(data) {
+				$scope.resources.splice(idx, 1);
+				$scope.selected = null;
+				$log.info('It worked!' + data);
+			}).error(function(error, data, status, config) {
+				$log.info('It doesnt work!' + data + config);
+			});
+		}
 
 		var playlistId = DataService.get();
 		
