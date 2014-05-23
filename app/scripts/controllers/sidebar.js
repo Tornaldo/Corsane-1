@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('corsaneApp')
-	.controller('SidebarCtrl', function($rootScope, $scope, $log, $resource, DataService, $location) {
+	.controller('SidebarCtrl', function($rootScope, $scope, $log, $resource, DataService, $location, $http) {
 		$rootScope.defaultLists = [{
 			name: 'Angular 101',
 			resources: []
@@ -10,10 +10,13 @@ angular.module('corsaneApp')
 			resources: []
 		}];
 		$scope.addPlaylist = function() {
-			this.defaultLists.push({
-				name: 'Untitled list',
-				resources: []
+			$http.post('http://localhost:8888/Corsane/web/app_dev.php/api/lists/addlists').success(function(data) {
+				$rootScope.lists.push(data);
+				$log.info('It worked!' + data);
+			}).error(function(error, data, status, config) {
+				$log.info('It doesnt work!' + data + config);
 			});
+
 		};
 
 		var getLists = $resource('http://localhost:8888/Corsane/web/app_dev.php/api/lists', {
@@ -25,7 +28,7 @@ angular.module('corsaneApp')
 		$scope.passPlaylist = function(playlist) {
 			$location.path('/playlist').search(playlist.name);
 			DataService.set(playlist.id);
-			$log.info('SidebarTest: '+ playlist.id);
-		}
+			$log.info('SidebarTest: ' + playlist.id);
+		};
 
 	});

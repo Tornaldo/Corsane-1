@@ -13,6 +13,7 @@ TODO
 
 	Kommentere kode
 	Skrive urlparser
+	Skrive tester
 
 	Structure:
 		Home
