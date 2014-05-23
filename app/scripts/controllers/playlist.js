@@ -22,12 +22,13 @@ angular.module('corsaneApp')
 			
 			$http.post('http://localhost:8888/Corsane/web/app_dev.php/api/lists/removelistelements?listElementId='+ listElement.list_element_id + '&listId=' + playlistId).success(function(data) {
 				$scope.resources.splice(idx, 1);
-				$scope.selected = null;
+				$scope.showResource($scope.resources[0]);
+
 				$log.info('It worked!' + data);
 			}).error(function(error, data, status, config) {
 				$log.info('It doesnt work!' + data + config);
 			});
-		}
+		};
 
 		var playlistId = DataService.get();
 		
