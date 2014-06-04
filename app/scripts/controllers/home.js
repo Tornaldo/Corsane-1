@@ -1,12 +1,8 @@
 'use strict';
 
+// Home page controller
 angular.module('corsaneApp')
   .controller('HomeCtrl', function ($scope, $location) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma',
-      'SitePoint'
-    ];
+
 
   });

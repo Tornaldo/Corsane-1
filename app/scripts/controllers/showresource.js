@@ -1,5 +1,7 @@
 'use strict';
 
+
+// Not used
 angular.module('corsaneApp')
   .controller('ShowresourceCtrl', function ($scope) {
     $scope.awesomeThings = [
@@ -8,5 +10,4 @@ angular.module('corsaneApp')
       'Karma'
     ];
     
-
   });
