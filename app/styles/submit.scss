@@ -5,3 +5,25 @@
 #inputField {
 	padding-bottom: 10px;
 }
+
+#verticalBox {
+	resize: vertical;
+}
+
+#inputField span {
+	display: inline-block;
+	padding-right: 20px;
+}
+
+#inputField span input {
+	width: 20px;
+}
+
+
+#tab a {
+	text-align: center;
+}
+
+#tab {
+	width: 150px;
+}

@@ -24,6 +24,15 @@ angular.module('corsaneApp')
 				$log.info("It doesnt work!" + data + config);
 			});
 		};
-
+		
+		// Tab Control
+		this.tab = 1;
+		
+		this.setTab = function(tab) {
+			this.tab = tab;
+		};
+		
+		this.isSet = function(checkTab) {
+			return this.tab === checkTab;
+		};
 	});
-

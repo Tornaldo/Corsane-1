@@ -1,18 +1,58 @@
 
-  <section class="videos">
-    <h2 >Submit</h2>
-    <form ng-submit="submit()" ng-controller="SubmitCtrl">
-      <div id="inputField">
-        <input type="text" class="form-control" placeholder="URL" ng-model="resourceURL">
-      </div>
-      
-      <input type="text" class="form-control" placeholder="Name" ng-model="resourceName">
-      <div id="submitBtn">
-        <button type="submit" class="btn btn-primary">Submit</button>
-
-      </div>
-
-    </form>
-
-  </section>
-  	
+<section class="videos" ng-controller="SubmitCtrl as submitCtrl">
+	<h2>Submit</h2>
+	<ul class="nav nav-tabs" style="margin-bottom: 15px;">
+		<li ng-class="{active:submitCtrl.isSet(1)}" id="tab"> 
+			<a href ng-click="submitCtrl.setTab(1)" id="tab-content"><h4><b>Link</b></h4></a>
+		</li>
+		<li ng-class="{active:submitCtrl.isSet(2)}" id="tab">
+			<a href ng-click="submitCtrl.setTab(2)" id="tab-content"><h4><b>Text</b></h4></a>
+		</li>
+		<li ng-class="{active:submitCtrl.isSet(3)}" id="tab">
+			<a href ng-click="submitCtrl.setTab(3)" id="tab-content"><h4><b>File</b></h4></a>
+		</li>
+	</ul>
+	
+	<!-- Link -->
+	<div ng-show="submitCtrl.isSet(1)">
+		<form ng-submit="submitLink()">
+			<div id="inputField">
+				<input type="text" class="form-control" placeholder="URL" ng-model="resourceURL" />
+			</div>
+			<div id="inputField">
+				<span><input type="radio" name="type" value="text">Text</input></span>
+				<span><input type="radio" name="type" value="video">Video</input></span>
+				<span><input type="radio" name="type" value="presentation">Presentation</input></span>
+				<span><input type="radio" name="type" value="course">Course</input></span>
+			</div>
+			<div id="inputField">
+				<input type="text" class="form-control" placeholder="Name" ng-model="resourceName" />
+			</div>
+			<div id="submitBtn">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		</form>
+	</div>
+	
+	<!-- Text -->
+	<div ng-show="submitCtrl.isSet(2)">
+		<form ng-sumbit="submitText()">
+			<div id="inputField">
+				<input type="text" class="form-control" placeholder="Name" ng-model="textName" />
+			</div>
+			<div id="inputField">
+				<textarea id="verticalBox" class="form-control" placeholder="Write here..." ng-model="textBody" rows="10"></textarea>
+			</div>
+			<div id="submitBtn">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		</form>
+	</div>
+	
+	<!-- File -->
+	<div ng-show="submitCtrl.isSet(3)">
+		<div id="submitBtn">
+			<button type="submit" class="btn btn-primary">Upload</button>
+		</div>
+	</div>
+</section>
